@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Percentile Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Growth Percentile Calculator</h2>
+
+        <!-- Gender Selection -->
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="M" checked>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="F">
+            <label for="female">Female</label>
+        </div>
+
+        <!-- Birthday Selection (Single Date Picker) -->
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" min="2004-01-01" max="2030-12-31" required>
+
+        <!-- Height Input -->
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter height" required>
+
+        <!-- Weight Input -->
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight" required>
+
+        <!-- Calculate Button -->
+        <button onclick="calculateGrowth()">Calculate</button>
+
+        <!-- Results Display -->
+        <div id="result"></div>
+    </div>
+</body>
+</html>
