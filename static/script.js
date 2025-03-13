@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let birthdayInput = document.getElementById("birthday");
 
     // 預設日期
-    birthdayInput.value = "2015-01-01";
+    birthdayInput.value = "2020-01-01";
 
     // 確保日期範圍在 2004-2030 之間
     birthdayInput.addEventListener("change", function () {
