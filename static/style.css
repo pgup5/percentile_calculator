@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 
-/* Container */
+/* Main container */
 .container {
     max-width: 500px;
     margin: 20px auto;
@@ -17,20 +17,43 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Increase font size for better mobile readability */
+/* Headings */
 h2 {
     font-size: 24px;
 }
 
+/* Form labels */
 label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Gender selection */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 18px;
 }
 
-/* Form inputs */
-input, select, button {
+.gender-option input {
+    transform: scale(1.5);
+}
+
+/* Form inputs (Birthday, Height, Weight - 85% width) */
+input[type="date"],
+input[type="number"] {
     font-size: 18px;
-    padding: 10px;
-    width: 100%;
+    padding: 12px;
+    width: 85%; /* Set input width to 85% */
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -43,6 +66,8 @@ button {
     font-weight: bold;
     border: none;
     cursor: pointer;
+    width: 85%; /* Button width matches input */
+    padding: 12px;
 }
 
 button:hover {
@@ -69,9 +94,12 @@ button:hover {
         font-size: 20px;
     }
 
-    input, select, button {
+    input[type="date"],
+    input[type="number"],
+    button {
         font-size: 20px;
-        padding: 12px;
+        padding: 14px;
+        width: 85%; /* Ensure width remains 85% on mobile */
     }
 
     #result p {
