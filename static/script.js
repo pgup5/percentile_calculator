@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let birthdayInput = document.getElementById("birthday");
 
     // Set default date to prevent invalid input
-    birthdayInput.value = "2010-01-01";
+    birthdayInput.value = "2015-01-01";
 
     // Ensure the date is within the allowed range (2004-2030)
     birthdayInput.addEventListener("change", function () {
