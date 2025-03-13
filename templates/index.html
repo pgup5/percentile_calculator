@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Growth Percentile Calculator</title>
+    <title>兒童生長百分位計算器</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script defer src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <div class="container">
-        <h2>Growth Percentile Calculator</h2>
+        <h2>兒童生長百分位計算器</h2>
 
-        <!-- Gender Selection -->
-        <label>Gender:</label>
+        <!-- 性別選擇 -->
+        <label>性別：</label>
         <div class="radio-group">
             <div class="gender-option">
                 <input type="radio" id="male" name="gender" value="M" checked>
-                <label for="male">Boy</label>
+                <label for="male">男孩</label>
             </div>
             <div class="gender-option">
                 <input type="radio" id="female" name="gender" value="F">
-                <label for="female">Girl</label>
+                <label for="female">女孩</label>
             </div>
         </div>
 
-        <!-- Birthday Selection (Single Date Picker) -->
-        <label for="birthday">Birthday:</label>
+        <!-- 生日選擇 -->
+        <label for="birthday">出生日期：</label>
         <input type="date" id="birthday" min="2004-01-01" max="2030-12-31" required>
 
-        <!-- Height Input -->
-        <label for="height">Height (cm):</label>
-        <input type="number" id="height" placeholder="Enter height" required>
+        <!-- 身高輸入 -->
+        <label for="height">身高（公分）：</label>
+        <input type="number" id="height" placeholder="請輸入身高" required>
 
-        <!-- Weight Input -->
-        <label for="weight">Weight (kg):</label>
-        <input type="number" id="weight" placeholder="Enter weight" required>
+        <!-- 體重輸入 -->
+        <label for="weight">體重（公斤）：</label>
+        <input type="number" id="weight" placeholder="請輸入體重" required>
 
-        <!-- Calculate Button -->
-        <button onclick="calculateGrowth()">Calculate</button>
+        <!-- 計算按鈕 -->
+        <button onclick="calculateGrowth()">計算</button>
 
-        <!-- Results Display -->
+        <!-- 結果顯示 -->
         <div id="result"></div>
     </div>
 </body>
